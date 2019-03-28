@@ -1,0 +1,12 @@
+FROM localhost:5000/archpy
+
+ENV PIPENV_VENV_IN_PROJECT 1
+ENV PYTHON_VERSIONS 3.7.0
+
+WORKDIR /build
+COPY . /build
+
+RUN pyenv local $PYTHON_VERSIONS
+RUN pipenv install --dev --deploy --ignore-pipfile
+
+CMD ['pipenv', 'run', 'python', '-m', 'osiris-ext.console']

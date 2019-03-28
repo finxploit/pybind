@@ -1,0 +1,2 @@
+include README.org LICENSE VERSION test-requirements.txt requirements.txt
+prune *.pyc

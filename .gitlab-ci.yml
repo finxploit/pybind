@@ -1,0 +1,32 @@
+image: localhost:5000/archpy:latest
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  LC_ALL: en_US.utf-8 
+  LANG: en_US.utf-8
+
+before_script:
+  - pyenv local 3.6.6 3.7.0
+  - pip install --upgrade pip pipenv setuptools tox tox-pyenv
+
+test:
+  script:
+    - tox
+  artifacts:
+    paths:
+      - htmlcov/
+
+pages:
+  stage: deploy
+  dependencies:
+    - test
+  script:
+    - pipenv install --dev --deploy --ignore-pipfile
+    - pipenv run make -C ./docs html
+    - mv docs/build/html public
+    - mv htmlcov public/cov
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

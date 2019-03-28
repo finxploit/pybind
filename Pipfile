@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.finxploit.com"
+name = "mypypi"
+
+[packages]
+click = "*"
+PyYAML = "*"
+
+[dev-packages]
+bump2version = "*"
+pytest = "*"                                                                                          
+pytest-cov = "*"
+pytest-mock = "*"
+tox = "*"
+pylint = "*"
+sphinx = "*"
+"sphinxjp.themes.basicstrap" = "*"
+sphinx_rtd_theme = "*"
+nbsphinx = "*"
+pygments = "*"
+matplotlib = "*"
+jupyter = "*"
+pandoc = "*"
+
+[requires]
+python_version = "3.7"

@@ -3,24 +3,17 @@ url = "https://pypi.finxploit.com"
 name = "mypypi"
 
 [packages]
-click = "*"
-PyYAML = "*"
+cffi = "*"
 
 [dev-packages]
 bump2version = "*"
 pytest = "*"                                                                                          
 pytest-cov = "*"
-pytest-mock = "*"
+pytest-benchmark = "*"
 tox = "*"
 pylint = "*"
-sphinx = "*"
-"sphinxjp.themes.basicstrap" = "*"
-sphinx_rtd_theme = "*"
-nbsphinx = "*"
-pygments = "*"
-matplotlib = "*"
-jupyter = "*"
-pandoc = "*"
+nufft = {editable = true,git = "https://github.com/dfm/python-nufft.git",sys_platform = "!= 'win32'"}
+numba = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.6.6"

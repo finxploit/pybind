@@ -6,6 +6,7 @@
 .coverage
 
 .cache/
+.venv/
 .tox/
 *.egg-info/
 

@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('../../'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'osiris-ext'
+project = 'pybind'
 copyright = '2019, Dimitar Petrov'
 author = 'Dimitar Petrov'
 
@@ -120,7 +120,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'osiris-extdoc'
+htmlhelp_basename = 'pybinddoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -147,7 +147,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'osiris-ext.tex', 'osiris-ext Documentation',
+    (master_doc, 'pybind.tex', 'pybind Documentation',
      'Dimitar Petrov', 'manual'),
 ]
 
@@ -157,7 +157,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'osiris-ext', 'osiris-ext Documentation',
+    (master_doc, 'pybind', 'pybind Documentation',
      [author], 1)
 ]
 
@@ -168,8 +168,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'osiris-ext', 'osiris-ext Documentation',
-     author, 'osiris-ext', 'One line description of project.',
+    (master_doc, 'pybind', 'pybind Documentation',
+     author, 'pybind', 'One line description of project.',
      'Miscellaneous'),
 ]
 

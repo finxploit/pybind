@@ -1,2 +1,6 @@
-include README.org LICENSE VERSION test-requirements.txt requirements.txt
+include README.org LICENSE VERSION 
+include pybind/cnufft/cnufft.c
+include pybind/cnufft/cnufft.h
+include pybind/cnufft/libcnufft.so
+include pybind/cnufft/libfnufft.so
 prune *.pyc

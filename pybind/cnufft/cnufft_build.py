@@ -22,12 +22,12 @@ with open(os.path.join(folder, "cnufft.h")) as f:
     ffibuilder.cdef(f.read())
 
 ffibuilder.set_source(
-    "pybind._cnufft",
+    "pybind.cnufft._cnufft",
     '#include "cnufft.h"',
     libraries=["cnufft", "fnufft"],
     library_dirs=[folder,],
     include_dirs=[folder,],
-    extra_link_args=['-Wl,-rpath=$ORIGIN/cnufft/'],
+    extra_link_args=['-Wl,-rpath=$ORIGIN/'],
 )
 
 if __name__ == "__main__":

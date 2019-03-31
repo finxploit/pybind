@@ -34,3 +34,13 @@ int nufft3d1(int nj, double* xj, double* yj, double* zj, double* cj,
 
   return ier;
 }
+
+
+int nufft3d2(int nj, double* xj, double* yj, double* zj, double* cj,
+             int iflag, double eps, int ms, int mt, int mu, double* fk) {
+
+  int ier = -1;
+  c_nufft3d2f90(nj, xj, yj, zj, cj, iflag, eps, ms, mt, mu, fk, &ier);
+
+  return ier;
+}

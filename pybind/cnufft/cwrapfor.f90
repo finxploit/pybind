@@ -58,4 +58,17 @@ subroutine c_nufft3d1f90(nj,xj,yj,zj,cj,iflag,eps,ms,mt,mu,fk,ier) bind(c)
 
 end subroutine c_nufft3d1f90
 
+subroutine c_nufft3d2f90(nj,xj,yj,zj,cj,iflag,eps,ms,mt,mu,fk,ier) bind(c)
+  implicit none
+  integer(c_int), intent(in), value :: nj, ms, mt, mu, iflag
+  real(c_double), intent(in), value :: eps
+  real(c_double), intent(in) :: xj(1:nj), yj(1:nj), zj(1:nj)
+  complex(c_double_complex), intent(in) :: fk(1:ms,1:mt,1:mu)
+  complex(c_double_complex), intent(out) :: cj(1:nj)
+  integer(c_int), intent(out) :: ier
+
+  call nufft3d2f90(nj,xj,yj,zj,cj,iflag,eps,ms,mt,mu,fk,ier)
+
+end subroutine c_nufft3d2f90
+
 end module cwrap_nufft

@@ -41,7 +41,7 @@ setup(
     url="https://pybind.readthedocs.org",
     setup_requires=["cffi>=1.0.0"],
     cffi_modules=["pybind/cnufft/cnufft_build.py:ffibuilder"],
-    install_requires=["cffi>=1.0.0"],
+    install_requires=["cffi>=1.0.0", "numpy>=1.16", "numba>=0.43.1"],
     include_package_data=True,
     packages=find_packages(exclude=["tests"]),
     classifiers=[
